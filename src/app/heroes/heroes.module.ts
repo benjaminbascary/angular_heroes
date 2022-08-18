@@ -6,19 +6,14 @@ import { HeroComponent } from './pages/hero/hero.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 
-
 @NgModule({
   declarations: [
-    
-  
     AddComponent,
-            SearchComponent,
-            HeroComponent,
-            HomeComponent,
-            ListComponent
+    SearchComponent,
+    HeroComponent,
+    HomeComponent,
+    ListComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class HeroesModule { }
+export class HeroesModule {}
