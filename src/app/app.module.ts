@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
+// Styling
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Developer's
+import { AppComponent } from './app.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { AppRouterModule } from './AppRouter.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { NotfoundComponent } from './shared/notfound/notfound.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
