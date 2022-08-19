@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Developer's
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
-import { AppRouterModule } from './AppRouter.module';
+import { AppRouterModule } from './appRouter.module';
 
 @NgModule({
   declarations: [
