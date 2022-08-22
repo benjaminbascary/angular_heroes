@@ -1,13 +1,68 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav mode="push">
-    <h1>Sidenav</h1>
+    <mat-toolbar>
+      <span>Menu</span>
+      
+      <span class="spacer"></span>
+
+      <button mat-icon-button>
+        <mat-icon 
+          (click)="sidenav.toggle()">
+          menu
+        </mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a
+        (click)="sidenav.toggle()"
+        routerLink="./list" 
+        mat-list-item>
+        <mat-icon 
+          mat-list-icon>
+          label
+        </mat-icon>
+        <span>Heroes list</span>
+      </a>
+      <a
+        (click)="sidenav.toggle()"
+        routerLink="./add" 
+        mat-list-item>
+        <mat-icon 
+          mat-list-icon>
+          add
+        </mat-icon>
+        <span>Add</span>
+      </a>
+      <a
+        (click)="sidenav.toggle()"
+        routerLink="./search" 
+        mat-list-item>
+        <mat-icon 
+          mat-list-icon>
+          search
+        </mat-icon>
+        <span>Search</span>
+      </a>
+    </mat-nav-list>
   </mat-sidenav>
+
   <mat-toolbar>
-    <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">
-        menu
-      </mat-icon>
-    </button>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">
+          menu
+        </mat-icon>
+      </button>
+
+      <span class="spacer"></span>
+
+      <button
+        mat-button 
+        mat-icon-button>
+        Logout
+      </button>
   </mat-toolbar>
 </mat-sidenav-container>
-<router-outlet></router-outlet>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
