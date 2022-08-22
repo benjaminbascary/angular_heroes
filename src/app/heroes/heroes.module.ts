@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Developer's
 import { AddComponent } from './pages/add/add.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HeroComponent } from './pages/hero/hero.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
+// Child Routing module
 import { HeroesRoutingModule } from './heroes-routing.module';
+// Styling
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +23,9 @@ import { HeroesRoutingModule } from './heroes-routing.module';
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    FlexLayoutModule,
+    HeroesRoutingModule,
+    MaterialModule
   ],
 })
 export class HeroesModule {}
